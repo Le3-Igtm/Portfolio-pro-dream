@@ -1,0 +1,436 @@
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 12px 22px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    font-weight: 700;
+    font-size: 0.95rem;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Bouton principal */
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-dark);
+}
+
+
+/* Bouton secondaire */
+
+.btn-secondary {
+    background: var(--color-white);
+    color: var(--color-dark);
+    border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+
+/* WhatsApp */
+
+.btn-whatsapp {
+    background: var(--color-whatsapp);
+    color: var(--color-white);
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+}
+
+
+/* =========================
+   MENU MOBILE
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: var(--color-dark);
+
+    font-size: 2rem;
+    line-height: 1;
+
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   CARTES
+========================= */
+
+.info-card {
+    padding: 30px;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.info-card p {
+    margin-top: 12px;
+    color: var(--color-muted);
+}
+
+
+/* =========================
+   TARIFS
+========================= */
+
+.pricing-card {
+    position: relative;
+
+    padding: 35px;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.pricing-card h3 {
+    font-size: 1.4rem;
+}
+
+.price {
+    margin: 18px 0;
+
+    color: var(--color-dark);
+
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.price span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-muted);
+}
+
+.pricing-card > p {
+    min-height: 70px;
+    color: var(--color-muted);
+}
+
+.pricing-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    margin: 25px 0 30px;
+}
+
+.pricing-card li {
+    position: relative;
+
+    padding-left: 22px;
+
+    color: var(--color-text);
+    font-size: 0.93rem;
+}
+
+.pricing-card li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.pricing-card .btn {
+    margin-top: auto;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -13px;
+    right: 25px;
+
+    padding: 6px 12px;
+
+    background: var(--color-primary);
+    color: var(--color-white);
+
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+/* =========================
+   PROJETS
+========================= */
+
+.project-card {
+    overflow: hidden;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-primary-light),
+            #f1f5f9
+        );
+}
+
+.project-image img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.project-image span {
+    position: relative;
+    z-index: 2;
+
+    padding: 6px 10px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 6px;
+
+    color: var(--color-primary);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.project-content {
+    padding: 28px;
+}
+
+.project-category {
+    color: var(--color-primary);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-content h2,
+.project-content h3 {
+    margin: 10px 0;
+}
+
+.project-content p {
+    color: var(--color-muted);
+}
+
+.project-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 20px 0;
+}
+
+.project-content li {
+    padding: 5px 9px;
+
+    background: var(--color-light);
+
+    border-radius: 6px;
+
+    font-size: 0.8rem;
+}
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.text-link:hover {
+    color: var(--color-primary-dark);
+}
+
+.section-cta {
+    margin-top: 45px;
+    text-align: center;
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--color-dark);
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    color: var(--color-dark);
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(15, 118, 110, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-note {
+    margin-top: 15px;
+
+    color: var(--color-muted);
+
+    font-size: 0.85rem;
+}
+
+@media (max-width: 1000px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .main-nav.mobile-open {
+        display: block;
+
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+
+        background: var(--color-white);
+        border-bottom: 1px solid var(--color-border);
+
+        padding: 20px;
+
+        box-shadow: var(--shadow-md);
+    }
+
+    .main-nav.mobile-open ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-nav.mobile-open {
+        top: 68px;
+    }
+}
